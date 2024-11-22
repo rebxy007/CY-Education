@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CY Education - Home</title>
+    <link rel="icon" href="logoooo.png" type="image/x-icon">
+    <style>
+        .contact-info {
+            display:table-row;
+            font-size: 14px;
+            flex-direction: row;
+            
+            color: #ffffff;
+        }
+
+        .header .contact-info a {
+            color: #ffffff;
+            font-size: 10px;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #9a0007, #d32f2f);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #d32f2f;
+        }
+
+        .header img {
+            width: 150px;
+            vertical-align: middle;
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 38px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-container h2 {
+            color: #d32f2f;
+            font-size: 26px;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 2px solid #d32f2f;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .content-container p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .content-section {
+            margin: 20px 0;
+        }
+
+        .content-section h3 {
+            color: #d32f2f;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .content-section ul {
+            padding-left: 20px;
+            color: #555;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+        }
+
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #d32f2f;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #9a0007;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #9a0007, #d32f2f);
+            color: #ffffff;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .header img {
+                width: 40px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .content-container {
+                padding: 15px;
+            }
+
+            .image-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .navbar a {
+            color: #f2f2f2;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body style="background-color: #dbd8d8;">
+    <div class="header" style="font-size: 100pt; font-family: 'Times New Roman', Times, serif;">
+        <img src="logoooo.png" alt="CY Education Logo">CY EDUCATION
+        
+    </div>
+    <!--<div class="contact-info">
+        <a href="https://www.facebook.com/YourPage" target="_blank">Facebook</a> &nbsp;
+        <a href="https://t.me/YourTelegramChannel" target="_blank">Telegram</a>
+         Call us:09-772488880, 09-778885606 &nbsp;
+        Address: 71 <sup>st</sup>, Between 27<sup>th</sup>& 28 <sup>th</sup>
+    </div> -->
+
+    <div class="navbar" style="font-size: xx-large; text-align: center;">
+        <a href="CY_Home.html">HOME</a>
+        <a href="CY_Aboutus.html">ABOUT US</a>
+        <a href="CY_StudentLife.html">STUDENT LIFE</a>
+        <a href="CY_Education.html">EDUCATION</a>
+        <a href="CY_Admission.html">ADMISSION</a>
+        <a href="CY_Event.html">EVENTS & NEWS</a>
+        <a href="CY_Contact.html">CONTACTS</a>
+       
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop width="100%">
+            <source src="1111.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div style="text-align: center; color: #333;">
+            <h1>Welcome To Us</h1>
+            <h1>Welcome To CY Education</h1>
+           <h3> Our School is proud to offer the Cambridge international curriculum, the world's most popular international qualification for 10 to 16 year old. It is recognized by leading universities and employers worldwide and is an international passport to progression and success.
+            Our buildings are filled with children and adults who want to come to school every day. They are engaged in activities that light up their brains, sharpen their critical capacities and develop their consciences.
+        </h3>
+    </div>    
+    <div class="footer">
+        <p>&copy; 2024 CY Education. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>
+
